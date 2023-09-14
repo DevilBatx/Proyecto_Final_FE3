@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <ul>
+      <ul className='lista'>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -17,9 +17,10 @@ const Navbar = () => {
         <li>
           <Link to="/favs">Favs</Link>
         </li>
+        
       </ul>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button>Change theme</button>
+      <button className='boton-nav'>Change theme</button>
     </nav>
   )
 }

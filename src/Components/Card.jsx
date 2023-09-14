@@ -26,9 +26,8 @@ const Card = ({data: { name, username, id }}) => {
       <Link to={`/dentist/${id}`}>
         <img src="public\images\doctor.jpg" alt="Image" />
         <h2>{name}</h2>
-        <h3>{username}</h3>
+        <p>{username}</p>
         <h4>{id}</h4>
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
       </Link>
       <button onClick={addFav} className="favButton">{favorite ? "❤️" : "🤍"}</button>
     </div>

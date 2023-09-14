@@ -31,7 +31,7 @@ const Form = ({addOnSubmit}) => {
         <input type="text" placeholder="Ingrese su email" value={email} onChange={(e) => setEmail(e.target.value)}/>
         <button type="submit">Enviar</button>
         <div>
-          {error && <p>{error}</p>}
+          {error && <p className="p-form">{error}</p>}
         </div>
       </form>
     </div>

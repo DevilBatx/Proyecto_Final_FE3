@@ -24,10 +24,25 @@ h1{
 }
 
 nav{
+  background-color: #aca9a9;
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  justify-content: flex-end;
   padding: 1rem;
+}
+
+.lista{
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+li{
+  margin-left: 1rem;
+}
+
+.boton-nav{
+  margin-right: 18.4rem;
 }
 
 a{
@@ -50,6 +65,20 @@ footer {
   width: 90%;
   height: 40px;
   margin-top: 2rem;
+}
+
+.listaDos{
+  display: flex;
+  list-style: none;
+  
+  
+}
+
+.imagenes{
+  width: 2rem;
+  background-color: #000000;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 footer > img{
@@ -75,6 +104,7 @@ form{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
@@ -92,14 +122,14 @@ form{
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 90vw;
+  width: 70vw;
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
 }
 
 table {
- border-collapse: collapse;
+    border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
@@ -124,4 +154,20 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+
+.centrado{
+  text-align: center;
+}
+
+.sub-titulo{
+  padding-bottom: 2rem;
+}
+
+.p-form{
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+}
+
+
 
