@@ -29,14 +29,14 @@ export const ContextProvider = ({ children }) => {
 
   const dataApi = (url) => {
 
-    useEffect(() => {
+    fetch(url)
+    .then((response)=> response.json())
+    .then((result)=> {
+      dispatch({type:"FETCH", payload:result})
+    }) 
 
-      fetch(url)
-        .then((response)=> response.json())
-        .then((result)=> {
-          dispatch({type:"FETCH", payload:result})
-        }) 
-  }, [url])
+  //   useEffect(() => {
+  // }, [url])
 
 }
 

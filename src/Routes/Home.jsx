@@ -18,22 +18,22 @@ const Home = () => {
   //   setDentists(data);
   // };
 
-  const getDentist = ()=>{
-    dataApi("https://jsonplaceholder.typicode.com/users")
-    setDentists(state.data)
+  const getDentist = async () => {
+    await dataApi("https://jsonplaceholder.typicode.com/users");
+    setDentists(state.data);
     console.log(state.data);
   }
 
   useEffect(() => {
     getDentist();
-  }, [state]);
+  },[]);
 
   return (
     <main className="">
       <h1>Home</h1>
       <div className="card-grid">
         {dentists.map((dentist) => (
-          <Card data={dentist} />
+          <Card key= {dentist.id} data={dentist} />
         ))}
       </div>
     </main>
