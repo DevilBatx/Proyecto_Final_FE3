@@ -18,7 +18,7 @@ const Home = () => {
   },[state.data]);
 
   return (
-    <main className="">
+    <main className={state.theme}>
       <h1>Home</h1>
       <div className="card-grid">
         {Array.isArray(state.data) && state.data.map((dentist) => (
