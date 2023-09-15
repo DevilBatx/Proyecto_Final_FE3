@@ -1,8 +1,6 @@
 import { createContext, useReducer } from "react";
 
 
-
-
 export const ContextGlobal = createContext();
 
 const reducer = (state, action) => {
@@ -28,15 +26,11 @@ export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const dataApi = (url) => {
-
-    fetch(url)
+    return fetch(url)
     .then((response)=> response.json())
     .then((result)=> {
       dispatch({type:"FETCH", payload:result})
     }) 
-
-  //   useEffect(() => {
-  // }, [url])
 
 }
 
