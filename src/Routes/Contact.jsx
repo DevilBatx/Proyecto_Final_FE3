@@ -8,12 +8,15 @@ const Contact = () => {
 
   const { state } = useContext(ContextGlobal)
 
+  const addOnSubmit= (nombre,email)=> console.log(`Nombre: ${nombre} - Email: ${email}`);
+
+
   return (
     <main className={state.theme}>
       <div className='centrado'>
         <h2 className='titulo-contact'>Want to know more?</h2>
         <p className='sub-titulo'>Send us your questions and we will contact you</p>
-        <Form />
+        <Form addOnSubmit={addOnSubmit} />
       </div>
     </main>
   )
