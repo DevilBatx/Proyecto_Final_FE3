@@ -6,7 +6,7 @@ import { ContextGlobal } from './utils/global.context'
 
 const Navbar = () => {
 
-  const { state, dispatch, dataApi } = useContext(ContextGlobal)
+  const { state, dispatch } = useContext(ContextGlobal)
 
 const handlerTheme = ()=>{
   state.theme == "light"? dispatch({type:"DARK-THEME"}): dispatch({type:"LIGHT-THEME"})
@@ -14,7 +14,7 @@ const handlerTheme = ()=>{
 
 
   return (
-    <nav>
+    <nav className={state.theme}>
       <ul className='lista'>
         <li>
           <Link to="/">Home</Link>
@@ -28,7 +28,7 @@ const handlerTheme = ()=>{
         
       </ul>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={handlerTheme} className='boton-nav'>Change theme</button>
+      <button onClick={handlerTheme} className='boton-nav'></button>
     </nav>
   )
 }
